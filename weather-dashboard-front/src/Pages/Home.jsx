@@ -21,9 +21,6 @@ function Home() {
   const showModal = () => {
     setIsModalOpen(true);
   };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
   const handleCancel = () => {
     setIsModalOpen(false);
   };
@@ -128,7 +125,7 @@ function Home() {
       <Modal
         title="Adicionar Cidade"
         open={isModalOpen}
-        onOk={handleOk}
+        onOk={create}
         onCancel={handleCancel}
       >
         <Row>
@@ -143,9 +140,6 @@ function Home() {
             onSelect={(e) => setCity(JSON.parse(e))}
           />
         </Row>
-        <Button type="primary" onClick={create}>
-          Salvar
-        </Button>
       </Modal>
     </div>
   );
