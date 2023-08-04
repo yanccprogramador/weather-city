@@ -6,7 +6,6 @@
 substitua a chabe da api openweather com a sua que se consegue em https://openweathermap.org/api
 ```
 POSTGRES_HOST="postgres"
-POSTGRES_HOST_TEST="localhost"
 POSTGRES_PORT=5432
 POSTGRES_DB="WEATHER"
 POSTGRES_USER="root"
@@ -21,16 +20,15 @@ $ docker-compose up
 ```
 
 ## Test
-Por favor rode fora dos containers e garanta que o container continue de pe
 ```bash
 # unit tests
-$ npm run test
+$ docker exec weather-api npm run test
 
 # e2e tests
-$ npm run test:e2e
+$  docker exec weather-api npm run test:e2e
 
 # test coverage
-$ npm run test:cov
+$  docker exec weather-api npm run test:cov
 ```
 
 
